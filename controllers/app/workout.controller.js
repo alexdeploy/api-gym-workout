@@ -26,5 +26,19 @@ module.exports = {
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
+    },
+    /**
+     * @description Get a workout by id
+     * @param {*} req 
+     * @param {*} res 
+     */
+    getWorkout: async (req, res) => {
+        try {
+            const workout = await workoutService.getWorkout(req.params.id);
+            // get exercises info
+            res.status(200).json(workout);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
     }
 };
