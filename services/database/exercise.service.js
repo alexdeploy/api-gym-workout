@@ -19,5 +19,35 @@ module.exports = {
      */
     getExercises: async () => {
         return await Exercise.find();
+    },
+
+    /**
+     * @description Get a single exercise
+     * @param {*} id
+     * @returns {Promise}
+     * @throws {Error}
+     */
+    getExercise: async (id) => {
+        return await Exercise.findById(id);
+    },
+
+    /**
+     * @description Delete an exercise
+     * @param {*} id
+     * @returns {Promise}
+     * @throws {Error}
+     */
+    updateExercise: async (id, exerciseData) => {
+        return await Exercise.findByIdAndUpdate(id, exerciseData, { new: true });
+    },
+
+    /**
+     * @description Delete an exercise
+     * @param {*} id
+     * @returns {Promise}
+     * @throws {Error}
+     */
+    deleteExercise: async (id) => {
+        return await Exercise.findByIdAndDelete(id);
     }
 };

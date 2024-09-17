@@ -29,5 +29,50 @@ module.exports = {
         } catch (error) {
             next(error);
         }
+    },
+
+    /**
+     * @description Get a single exercise
+     * @param {*} req 
+     * @param {*} res 
+     * @param {*} next 
+     */
+    getExercise: async (req, res, next) => {
+        try {
+            const exercise = await exerciseService.getExercise(req.params.id);
+            res.status(200).json(exercise);
+        } catch (error) {
+            next(error);
+        }
+    },
+
+    /**
+     * @description Update an exercise
+     * @param {*} req 
+     * @param {*} res 
+     * @param {*} next 
+     */
+    updateExercise: async (req, res, next) => {
+        try {
+            const exercise = await exerciseService.updateExercise(req.params.id, req.body);
+            res.status(200).json(exercise);
+        } catch (error) {
+            next(error);
+        }
+    },
+    
+    /**
+     * @description Delete an exercise
+     * @param {*} req 
+     * @param {*} res 
+     * @param {*} next 
+     */
+    deleteExercise: async (req, res, next) => {
+        try {
+            await exerciseService.deleteExercise(req.params.id);
+            res.status(204).end();
+        } catch (error) {
+            next(error);
+        }
     }
 }

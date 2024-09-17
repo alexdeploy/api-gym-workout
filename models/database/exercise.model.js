@@ -9,6 +9,8 @@ const exerciseSchema = new mongoose.Schema({
     },
     key: String,
     name: String,
+    icon: String,
+    description: String,
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
 });
