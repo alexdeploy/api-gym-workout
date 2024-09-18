@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { authenticateRole } = require('../middleware/auth.middleware');
 
 ////////////////////////
 // app routes
@@ -10,8 +11,8 @@ const workoutRoutes = require('./app/workout.routes');
 const planningRoutes = require('./app/planning.routes');
 
 // routes
-router.use('/workouts', workoutRoutes);
-router.use('/plannings', planningRoutes);
+router.use('/workouts', authenticateRole, workoutRoutes);
+router.use('/plannings', authenticateRole, planningRoutes);
 
 ////////////////////////
 // database routes
