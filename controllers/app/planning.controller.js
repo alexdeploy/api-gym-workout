@@ -21,7 +21,9 @@ module.exports = {
      */
     getPlannings: async (req, res) => {
         try {
-            const plannings = await PlanningService.getPlannings();
+            const { role, userId } = req.user;
+            console.log(userId);
+            const plannings = await PlanningService.getPlannings(userId);
             res.status(200).json(plannings);
         } catch (error) {
             res.status(500).json({ message: error.message });

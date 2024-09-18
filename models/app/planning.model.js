@@ -21,7 +21,7 @@ const planningSchema = new mongoose.Schema({
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        // ref: 'User' // TODO: Add User or Profile model
     },
     title: String,
     description: String,

@@ -15,8 +15,8 @@ const exerciseReferenceSchema = new mongoose.Schema({
     min: Number
   },
   material: {
-    type: String,
-    enum: ['body', 'dumbbell', 'barbell', 'machine', 'cable', 'band', 'ball']
+    type: Array,
+    required: false
   },
   recommendations: String,
   advices: String,
@@ -27,31 +27,30 @@ const exerciseReferenceSchema = new mongoose.Schema({
 const workoutSchema = new mongoose.Schema({
   trainerId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    // ref: 'User',
     required: false
   },
   traineeId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    // ref: 'User',
     required: false
   },
   name: { type: String, required: true },
   muscle_groups: [
     {
-      _id: mongoose.Schema.Types.ObjectId, // Referencia a grupos musculares
-      key: String // Clave del grupo muscular
+      _id: mongoose.Schema.Types.ObjectId,
+      key: String
     }
   ],
-  exercises: [exerciseReferenceSchema],
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now },
-  startDate: Date,
-  endDate: Date,
+  dates: [Date],
   status: {
     type: String,
     enum: ['pending', 'active', 'completed'],
     default: 'pending'
-  }
+  },
+  exercises: [exerciseReferenceSchema],
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
 });
 
 const Workout = appDB.model('Workout', workoutSchema);

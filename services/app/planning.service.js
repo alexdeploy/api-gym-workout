@@ -17,6 +17,17 @@ module.exports = {
     getPlannings: async () => {
         return await Planning.find();
     },
+
+    /**
+     * @description Get all plannings by user
+     * @param {*} userId 
+     * @param {*} role 
+     * @returns 
+     */
+    getPlannings: async (userId) => {
+        return await Planning.find({ userId: userId });
+    },
+
     /**
      * @description Get a planning by id
      * @param {*} id 

@@ -21,16 +21,19 @@ module.exports = {
      */
     getWorkouts: async (req, res) => {
         try {
-            const { page, size, sortBy, sort, date } = req.query;
-
-            const options = {
+            const { page, limit, sortBy, sort, date } = req.query;
+    
+            const query = {
+                traineeId: req.user.userId,
                 page: parseInt(page, 10) || 1,
-                limit: parseInt(size, 10) || 10,
+                limit: parseInt(limit, 10) || 10,
                 sortBy: sortBy || 'createdAt',
                 sort: sort || 'desc',
-                date: date || '',
+                date: date || null
             };
-            const workouts = await workoutService.getWorkouts(options);
+            
+            const workouts = await workoutService.getWorkouts(query);
+
             res.status(200).json(workouts);
         } catch (error) {
             res.status(500).json({ message: error.message });
@@ -46,6 +49,20 @@ module.exports = {
             const workout = await workoutService.getWorkout(req.params.id);
             // get exercises info
             res.status(200).json(workout);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+
+    /**
+     * @description Get today's workouts
+     * @param {*} req 
+     * @param {*} res 
+     */
+    getTodayWorkouts: async (req, res) => {
+        try {
+            const workouts = await workoutService.getTodayWorkouts();
+            res.status(200).json(workouts);
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
