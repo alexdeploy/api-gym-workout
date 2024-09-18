@@ -21,7 +21,16 @@ module.exports = {
      */
     getWorkouts: async (req, res) => {
         try {
-            const workouts = await workoutService.getWorkouts();
+            const { page, size, sortBy, sort, date } = req.query;
+
+            const options = {
+                page: parseInt(page, 10) || 1,
+                limit: parseInt(size, 10) || 10,
+                sortBy: sortBy || 'createdAt',
+                sort: sort || 'desc',
+                date: date || '',
+            };
+            const workouts = await workoutService.getWorkouts(options);
             res.status(200).json(workouts);
         } catch (error) {
             res.status(500).json({ message: error.message });

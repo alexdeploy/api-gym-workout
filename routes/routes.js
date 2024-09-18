@@ -1,9 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-const workoutRoutes = require('./app/workout.routes');
+////////////////////////
+// app routes
+////////////////////////
 
+// files
+const workoutRoutes = require('./app/workout.routes');
+const planningRoutes = require('./app/planning.routes');
+
+// routes
 router.use('/workouts', workoutRoutes);
+router.use('/plannings', planningRoutes);
 
 ////////////////////////
 // database routes
