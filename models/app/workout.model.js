@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const appDB = mongoose.connection.useDb('app');
 
 const exerciseReferenceSchema = new mongoose.Schema({
-  exercise: mongoose.Schema.Types.ObjectId,
-  exercises_order: Number,
+  info: mongoose.Schema.Types.ObjectId,
+  order: Number,
   sets: Number,
   reps: Number,
   rir: {

@@ -55,14 +55,15 @@ module.exports = {
     },
 
     /**
-     * @description Get today's workouts
-     * @param {*} req 
-     * @param {*} res 
+     * @description Get workout exercise
+     * @param {*} req
+     * @param {*} res
      */
-    getTodayWorkouts: async (req, res) => {
+    getWorkoutExercise: async (req, res) => {
         try {
-            const workouts = await workoutService.getTodayWorkouts();
-            res.status(200).json(workouts);
+            const workout = await workoutService.getWorkout(req.params.id);
+            const exercise = workout.exercises.id(req.params.exerciseId);
+            res.status(200).json(exercise);
         } catch (error) {
             res.status(500).json({ message: error.message });
         }

@@ -41,7 +41,7 @@ module.exports = {
         }
 
         const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-        console.log("decodedToken", decodedToken);
+
         if (!decodedToken.role) {
           return res.status(401).json({ success: false, error: 'Not role provided' });
         }

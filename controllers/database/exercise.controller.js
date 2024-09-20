@@ -24,7 +24,19 @@ module.exports = {
      */
     getExercises: async (req, res, next) => {
         try {
-            const exercises = await exerciseService.getExercises();
+
+            const { page, limit, sortBy, sort, date, search } = req.query;
+
+            const query = {
+                page: parseInt(page, 10) || 1,
+                limit: parseInt(limit, 10) || 10,
+                sortBy: sortBy || 'createdAt',
+                sort: sort || 'desc',
+                date: date || null,
+                search: search || { $exists: true }
+            };
+
+            const exercises = await exerciseService.getExercises(query);
             res.status(200).json(exercises);
         } catch (error) {
             next(error);

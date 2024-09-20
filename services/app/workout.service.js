@@ -1,4 +1,5 @@
 const Workout = require('../../models/app/workout.model');
+const Exercise = require('../../models/database/exercise.model');
 const mongoose = require('mongoose');
 const moment = require('moment');
 
@@ -13,6 +14,8 @@ module.exports = {
     },
     /**
      * @description Get all workouts
+     * @param {*} query contains all the query parameters for filtering and pagination
+     * @returns {Array} workouts of the trainee
      */
     getWorkouts: async (query) => {
         try {
@@ -40,31 +43,14 @@ module.exports = {
     },
     /**
      * @description Get a workout by id
-     * @param {*} id 
+     * @param {*} workoutId mongoose id of the workout
+     * @returns {Object} workout with exercises populated
      */
-    getWorkout: async (id) => {
-        return await Workout.findById(id)
+    getWorkout: async (workoutId) => {
+        return await Workout.findById(workoutId)
         .populate({
-            path: 'exercises.exercise', // Popula la referencia a "Exercise" en los ejercicios del workout
-            model: 'Exercise',          // Especificar el modelo que pertenece a la otra base de datos
-            options: { db: mongoose.connection.useDb('database') }, // Usar la base de datos correcta
-            select: 'name key',         // Campos a devolver del ejercicio (puedes ajustar según tus necesidades)
-        });
-    },
-
-    /**
-     * @description Get today's workouts
-     */
-    getTodayWorkouts: async () => {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const tomorrow = new Date(today);
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        return await Workout.find({
-            createdAt: {
-                $gte: today,
-                $lt: tomorrow
-            }
+            path: 'exercises.info',
+            model: Exercise,
         });
     }
 };

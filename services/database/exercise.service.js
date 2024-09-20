@@ -17,8 +17,21 @@ module.exports = {
      * @returns {Promise}
      * @throws {Error}
      */
-    getExercises: async () => {
-        return await Exercise.find();
+    getExercises: async (query) => {
+        const { page, limit, sortBy, sort, date, search } = query;
+
+        if (date) {
+            const startOfDay = moment(date).startOf('day').toISOString();
+            const endOfDay = moment(date).endOf('day').toISOString();
+            filter.dates = { $gte: startOfDay, $lte: endOfDay };
+        }
+
+        const exercises = await Exercise.find({ name: { $regex: search, $options: 'i' } })
+            .sort({ [sortBy]: sort })
+            .skip((page - 1) * limit)
+            .limit(limit);
+
+        return exercises;
     },
 
     /**
