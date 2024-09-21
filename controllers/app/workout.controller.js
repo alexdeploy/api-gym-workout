@@ -8,6 +8,14 @@ module.exports = {
      */
     createWorkout: async (req, res) => {
         try {
+            const userRole = req.user.role;
+
+            if(userRole == 'trainer') {
+                req.body.trainerId = req.user.userId;
+            } else {
+                req.body.traineeId = req.user.userId;
+            }
+                
             const workout = await workoutService.createWorkout(req.body);
             res.status(201).json(workout);
         } catch (error) {

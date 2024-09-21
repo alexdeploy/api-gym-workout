@@ -20,7 +20,8 @@ const exerciseReferenceSchema = new mongoose.Schema({
   },
   recommendations: String,
   advices: String,
-  notes: String
+  notes: String,
+  createdAt: { type: Date, default: Date.now }
 });
 
 // Definir el esquema del workout
@@ -36,6 +37,7 @@ const workoutSchema = new mongoose.Schema({
     required: false
   },
   name: { type: String, required: true },
+  description: String,
   muscle_groups: [
     {
       _id: mongoose.Schema.Types.ObjectId,
@@ -51,6 +53,17 @@ const workoutSchema = new mongoose.Schema({
   exercises: [exerciseReferenceSchema],
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
+});
+
+// Middleware to update 'updatedAt' on every save
+workoutSchema.pre('save', function(next) {
+  this.updatedAt = Date.now();
+  next();
+});
+
+// Autocalcular la cantidad de ejercicios
+workoutSchema.virtual('exercisesCount').get(function() {
+  return this.exercises.length;
 });
 
 const Workout = appDB.model('Workout', workoutSchema);

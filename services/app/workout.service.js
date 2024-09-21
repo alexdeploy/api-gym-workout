@@ -1,12 +1,12 @@
 const Workout = require('../../models/app/workout.model');
 const Exercise = require('../../models/database/exercise.model');
-const mongoose = require('mongoose');
 const moment = require('moment');
 
 module.exports = {
     /**
      * @description Create a new workout
-     * @param {*} workoutData 
+     * @param {*} workoutData
+     * * Works ✓
      */
     createWorkout: async (workoutData) => {
         const workout = new Workout(workoutData);
@@ -16,6 +16,7 @@ module.exports = {
      * @description Get all workouts
      * @param {*} query contains all the query parameters for filtering and pagination
      * @returns {Array} workouts of the trainee
+     * * Works ✓
      */
     getWorkouts: async (query) => {
         try {
@@ -45,6 +46,7 @@ module.exports = {
      * @description Get a workout by id
      * @param {*} workoutId mongoose id of the workout
      * @returns {Object} workout with exercises populated
+     * * Works ✓
      */
     getWorkout: async (workoutId) => {
         return await Workout.findById(workoutId)
