@@ -40,10 +40,6 @@ module.exports = {
             .populate({
                 path: 'profiles.role',
                 model: Role,
-/*                 populate: {
-                    path: 'exercises.exercise',
-                    model: Exercise
-                } */
             });
     },
 
