@@ -12,7 +12,7 @@ const planningRoutes = require('./app/planning.routes');
 
 // routes
 router.use('/workouts', authenticateRole, workoutRoutes);
-router.use('/plannings', authenticateRole, planningRoutes);
+router.use('/plannings', planningRoutes);
 
 ////////////////////////
 // database routes
@@ -27,3 +27,13 @@ router.use('/database/muscle-groups', muscleGroupRoutes);
 router.use('/database/exercises', exerciseRoutes);
 
 module.exports = router;
+
+////////////////////////
+// auth routes
+////////////////////////
+
+// files
+const userRoutes = require('./auth/user.routes');
+
+// routes
+router.use('/auth/users', userRoutes);
