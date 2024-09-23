@@ -33,7 +33,7 @@ module.exports = {
   }, */
   authenticateRole: async (req, res, next) => {
     try {
-        const authHeader = req.headers['authorization'];
+/*         const authHeader = req.headers['authorization'];
         const token = authHeader && authHeader.split(' ')[1];
 
         if(!token) {
@@ -44,11 +44,17 @@ module.exports = {
 
         if (!decodedToken.role) {
           return res.status(401).json({ success: false, error: 'Not role provided' });
-        }
+        } */
 
         // TODO: Check if the role exists on DB.
 
-        req.user = decodedToken;
+        // req.user = decodedToken;
+        const role = req.headers['role'];
+        const userId = req.headers['userId'];
+        req.user = {
+          userId: userId,
+          role: role
+        };
 
         next();
 

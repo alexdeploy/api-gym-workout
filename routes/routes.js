@@ -12,7 +12,7 @@ const planningRoutes = require('./app/planning.routes');
 
 // routes
 router.use('/workouts', authenticateRole, workoutRoutes);
-router.use('/plannings', planningRoutes);
+router.use('/plannings', authenticateRole, planningRoutes);
 
 ////////////////////////
 // database routes
