@@ -1,4 +1,5 @@
 const User = require('../../models/auth/user.model');
+const Role = require('../../models/database/role.model');
 
 module.exports = {
     /**
@@ -35,7 +36,15 @@ module.exports = {
      * @throws {Error}
      */
     getUser: async (id) => {
-        return await User.findById(id);
+        return await User.findById(id)
+            .populate({
+                path: 'profiles.role',
+                model: Role,
+/*                 populate: {
+                    path: 'exercises.exercise',
+                    model: Exercise
+                } */
+            });
     },
 
     /**

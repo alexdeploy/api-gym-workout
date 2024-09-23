@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const authDB = mongoose.connection.useDb('auth');
+const databaseDB = mongoose.connection.useDb('database');
 
 const roleSchema = new mongoose.Schema({
     _id: {
@@ -33,6 +33,6 @@ roleSchema.pre('save', function(next) {
     next();
 });
 
-const Role = authDB.model('Role', roleSchema);
+const Role = databaseDB.model('Role', roleSchema);
 
 module.exports = Role;
