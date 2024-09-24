@@ -7,8 +7,10 @@ const muscleGroupSchema = new mongoose.Schema({
         required: true,
         auto: true
     },
-    key: { type: String, required: true },
+    _key: { type: String, required: true },
     name: { type: String, required: true },
+    parentId: { type: mongoose.Schema.Types.ObjectId, ref: 'MuscleGroup', default: null },
+    children: [{ type: mongoose.Schema.Types.ObjectId, ref: 'MuscleGroup' }],
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
 });

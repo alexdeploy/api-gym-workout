@@ -1,0 +1,125 @@
+{
+    "materials": [
+      {
+        "_key": "dumbbell",
+        "name": "dumbbell"
+      },
+      {
+        "_key": "barbell",
+        "name": "barbell"
+      },
+      {
+        "_key": "kettlebell",
+        "name": "kettlebell"
+      },
+      {
+        "_key": "resistance_band",
+        "name": "resistance_band"
+      },
+      {
+        "_key": "medicine_ball",
+        "name": "medicine_ball"
+      },
+      {
+        "_key": "yoga_mat",
+        "name": "yoga_mat"
+      },
+      {
+        "_key": "jump_rope",
+        "name": "jump_rope"
+      },
+      {
+        "_key": "foam_roller",
+        "name": "foam_roller"
+      },
+      {
+        "_key": "pull_up_bar",
+        "name": "pull_up_bar"
+      },
+      {
+        "_key": "treadmill",
+        "name": "treadmill"
+      },
+      {
+        "_key": "stationary_bike",
+        "name": "stationary_bike"
+      },
+      {
+        "_key": "rowing_machine",
+        "name": "rowing_machine"
+      },
+      {
+        "_key": "battle_ropes",
+        "name": "battle_ropes"
+      },
+      {
+        "_key": "sandbag",
+        "name": "sandbag"
+      },
+      {
+        "_key": "weight_plate",
+        "name": "weight_plate"
+      },
+      {
+        "_key": "smith_machine",
+        "name": "smith_machine"
+      },
+      {
+        "_key": "bench_press",
+        "name": "bench_press"
+      },
+      {
+        "_key": "squat_rack",
+        "name": "squat_rack"
+      },
+      {
+        "_key": "leg_press_machine",
+        "name": "leg_press_machine"
+      },
+      {
+        "_key": "dip_station",
+        "name": "dip_station"
+      },
+      {
+        "_key": "cable_machine",
+        "name": "cable_machine"
+      },
+      {
+        "_key": "lat_pulldown_machine",
+        "name": "lat_pulldown_machine"
+      },
+      {
+        "_key": "rowing_handle",
+        "name": "rowing_handle"
+      },
+      {
+        "_key": "stepper",
+        "name": "stepper"
+      },
+      {
+        "_key": "adjustable_bench",
+        "name": "adjustable_bench"
+      },
+      {
+        "_key": "trap_bar",
+        "name": "trap_bar"
+      },
+      {
+        "_key": "ez_curl_bar",
+        "name": "ez_curl_bar"
+      },
+      {
+        "_key": "weight_lifting_belt",
+        "name": "weight_lifting_belt"
+      },
+      {
+        "_key": "ankle_weights",
+        "name": "ankle_weights"
+      },
+      {
+        "_key": "sliders",
+        "name": "sliders"
+      }
+    ]
+  }
+  

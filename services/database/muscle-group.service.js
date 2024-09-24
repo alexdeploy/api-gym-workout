@@ -19,6 +19,6 @@ module.exports = {
      * @throws {Error}
      */
     getMuscleGroups: async () => {
-        return await MuscleGroup.find();
-    }
+        return await MuscleGroup.find({ parentId: null })
+    },
 };

@@ -1,0 +1,401 @@
+{
+    "muscle_groups": [
+      {
+        "_key": "chest",
+        "name": "chest",
+        "children": [
+          {
+            "_key": "pectoralis_major",
+            "name": "pectoralis_major"
+          },
+          {
+            "_key": "pectoralis_minor",
+            "name": "pectoralis_minor"
+          },
+          {
+            "_key": "serratus_anterior",
+            "name": "serratus_anterior"
+          },
+          {
+            "_key": "subclavius",
+            "name": "subclavius"
+          }
+        ]
+      },
+      {
+        "_key": "back",
+        "name": "back",
+        "children": [
+          {
+            "_key": "trapezius",
+            "name": "trapezius"
+          },
+          {
+            "_key": "latissimus_dorsi",
+            "name": "latissimus_dorsi"
+          },
+          {
+            "_key": "rhomboids",
+            "name": "rhomboids",
+            "children": [
+              {
+                "_key": "rhomboid_major",
+                "name": "rhomboid_major"
+              },
+              {
+                "_key": "rhomboid_minor",
+                "name": "rhomboid_minor"
+              }
+            ]
+          },
+          {
+            "_key": "levator_scapulae",
+            "name": "levator_scapulae"
+          },
+          {
+            "_key": "teres_major",
+            "name": "teres_major"
+          },
+          {
+            "_key": "teres_minor",
+            "name": "teres_minor"
+          },
+          {
+            "_key": "infraspinatus",
+            "name": "infraspinatus"
+          },
+          {
+            "_key": "supraspinatus",
+            "name": "supraspinatus"
+          },
+          {
+            "_key": "erector_spinae",
+            "name": "erector_spinae",
+            "children": [
+              {
+                "_key": "iliocostalis",
+                "name": "iliocostalis"
+              },
+              {
+                "_key": "longissimus",
+                "name": "longissimus"
+              },
+              {
+                "_key": "spinalis",
+                "name": "spinalis"
+              }
+            ]
+          },
+          {
+            "_key": "serratus_posterior_superior",
+            "name": "serratus_posterior_superior"
+          },
+          {
+            "_key": "serratus_posterior_inferior",
+            "name": "serratus_posterior_inferior"
+          }
+        ]
+      },
+      {
+        "_key": "core",
+        "name": "core",
+        "children": [
+          {
+            "_key": "rectus_abdominis",
+            "name": "rectus_abdominis"
+          },
+          {
+            "_key": "external_obliques",
+            "name": "external_obliques"
+          },
+          {
+            "_key": "internal_obliques",
+            "name": "internal_obliques"
+          },
+          {
+            "_key": "transversus_abdominis",
+            "name": "transversus_abdominis"
+          },
+          {
+            "_key": "diaphragm",
+            "name": "diaphragm"
+          },
+          {
+            "_key": "quadratus_lumborum",
+            "name": "quadratus_lumborum"
+          }
+        ]
+      },
+      {
+        "_key": "arms",
+        "name": "arms",
+        "children": [
+          {
+            "_key": "biceps_brachii",
+            "name": "biceps_brachii"
+          },
+          {
+            "_key": "triceps_brachii",
+            "name": "triceps_brachii"
+          },
+          {
+            "_key": "brachialis",
+            "name": "brachialis"
+          },
+          {
+            "_key": "brachioradialis",
+            "name": "brachioradialis"
+          },
+          {
+            "_key": "coracobrachialis",
+            "name": "coracobrachialis"
+          },
+          {
+            "_key": "anconeus",
+            "name": "anconeus"
+          },
+          {
+            "_key": "forearm_muscles",
+            "name": "forearm_muscles",
+            "children": [
+              {
+                "_key": "flexor_carpi_radialis",
+                "name": "flexor_carpi_radialis"
+              },
+              {
+                "_key": "flexor_carpi_ulnaris",
+                "name": "flexor_carpi_ulnaris"
+              },
+              {
+                "_key": "palmaris_longus",
+                "name": "palmaris_longus"
+              },
+              {
+                "_key": "flexor_digitorum_superficialis",
+                "name": "flexor_digitorum_superficialis"
+              },
+              {
+                "_key": "flexor_digitorum_profundus",
+                "name": "flexor_digitorum_profundus"
+              },
+              {
+                "_key": "pronator_teres",
+                "name": "pronator_teres"
+              },
+              {
+                "_key": "pronator_quadratus",
+                "name": "pronator_quadratus"
+              },
+              {
+                "_key": "supinator",
+                "name": "supinator"
+              },
+              {
+                "_key": "extensor_carpi_radialis_longus",
+                "name": "extensor_carpi_radialis_longus"
+              },
+              {
+                "_key": "extensor_carpi_radialis_brevis",
+                "name": "extensor_carpi_radialis_brevis"
+              },
+              {
+                "_key": "extensor_carpi_ulnaris",
+                "name": "extensor_carpi_ulnaris"
+              },
+              {
+                "_key": "extensor_digitorum",
+                "name": "extensor_digitorum"
+              },
+              {
+                "_key": "extensor_pollicis_longus",
+                "name": "extensor_pollicis_longus"
+              },
+              {
+                "_key": "extensor_pollicis_brevis",
+                "name": "extensor_pollicis_brevis"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "shoulders",
+        "name": "shoulders",
+        "children": [
+          {
+            "_key": "deltoid",
+            "name": "deltoid"
+          },
+          {
+            "_key": "rotator_cuff",
+            "name": "rotator_cuff",
+            "children": [
+              {
+                "_key": "supraspinatus",
+                "name": "supraspinatus"
+              },
+              {
+                "_key": "infraspinatus",
+                "name": "infraspinatus"
+              },
+              {
+                "_key": "teres_minor",
+                "name": "teres_minor"
+              },
+              {
+                "_key": "subscapularis",
+                "name": "subscapularis"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "legs",
+        "name": "legs",
+        "children": [
+          {
+            "_key": "thigh",
+            "name": "thigh",
+            "children": [
+              {
+                "_key": "quadriceps",
+                "name": "quadriceps",
+                "children": [
+                  {
+                    "_key": "rectus_femoris",
+                    "name": "rectus_femoris"
+                  },
+                  {
+                    "_key": "vastus_lateralis",
+                    "name": "vastus_lateralis"
+                  },
+                  {
+                    "_key": "vastus_medialis",
+                    "name": "vastus_medialis"
+                  },
+                  {
+                    "_key": "vastus_intermedius",
+                    "name": "vastus_intermedius"
+                  }
+                ]
+              },
+              {
+                "_key": "hamstrings",
+                "name": "hamstrings",
+                "children": [
+                  {
+                    "_key": "biceps_femoris",
+                    "name": "biceps_femoris"
+                  },
+                  {
+                    "_key": "semitendinosus",
+                    "name": "semitendinosus"
+                  },
+                  {
+                    "_key": "semimembranosus",
+                    "name": "semimembranosus"
+                  }
+                ]
+              },
+              {
+                "_key": "sartorius",
+                "name": "sartorius"
+              },
+              {
+                "_key": "gracilis",
+                "name": "gracilis"
+              },
+              {
+                "_key": "adductors",
+                "name": "adductors",
+                "children": [
+                  {
+                    "_key": "adductor_longus",
+                    "name": "adductor_longus"
+                  },
+                  {
+                    "_key": "adductor_brevis",
+                    "name": "adductor_brevis"
+                  },
+                  {
+                    "_key": "adductor_magnus",
+                    "name": "adductor_magnus"
+                  }
+                ]
+              },
+              {
+                "_key": "pectineus",
+                "name": "pectineus"
+              }
+            ]
+          },
+          {
+            "_key": "lower_leg",
+            "name": "lower_leg",
+            "children": [
+              {
+                "_key": "tibialis_anterior",
+                "name": "tibialis_anterior"
+              },
+              {
+                "_key": "gastrocnemius",
+                "name": "gastrocnemius"
+              },
+              {
+                "_key": "soleus",
+                "name": "soleus"
+              },
+              {
+                "_key": "peroneus_longus",
+                "name": "peroneus_longus"
+              },
+              {
+                "_key": "peroneus_brevis",
+                "name": "peroneus_brevis"
+              },
+              {
+                "_key": "flexor_digitorum_longus",
+                "name": "flexor_digitorum_longus"
+              },
+              {
+                "_key": "extensor_digitorum_longus",
+                "name": "extensor_digitorum_longus"
+              },
+              {
+                "_key": "flexor_hallucis_longus",
+                "name": "flexor_hallucis_longus"
+              },
+              {
+                "_key": "extensor_hallucis_longus",
+                "name": "extensor_hallucis_longus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "glutes",
+        "name": "glutes",
+        "children": [
+          {
+            "_key": "gluteus_maximus",
+            "name": "gluteus_maximus"
+          },
+          {
+            "_key": "gluteus_medius",
+            "name": "gluteus_medius"
+          },
+          {
+            "_key": "gluteus_minimus",
+            "name": "gluteus_minimus"
+          },
+          {
+            "_key": "piriformis",
+            "name": "piriformis"
+          }
+        ]
+      }
+    ]
+  }
+  
