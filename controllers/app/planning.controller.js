@@ -52,5 +52,20 @@ module.exports = {
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
-    }
+    },
+
+    /**
+     * @description Add a workout to a planning
+     * @param {*} req 
+     * @param {*} res 
+     */
+    addWorkout: async (req, res) => {
+        try {
+            const workout = req.body;
+            const planning = await PlanningService.addWorkout(req.params.id, workout);
+            res.status(200).json(planning);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
 };

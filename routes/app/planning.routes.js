@@ -7,4 +7,8 @@ router.post('/', planningController.createPlanning);
 router.get('/', planningController.getPlannings);
 router.get('/:id', planningController.getPlanning);
 
+// add workout to planning
+router.post('/:id/workout', planningController.addWorkout);
+
+
 module.exports = router;

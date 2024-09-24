@@ -11,18 +11,12 @@ module.exports = {
         const planning = new Planning(planningData);
         return await planning.save();
     },
-    /**
-     * @description Get all plannings
-     */
-    getPlannings: async () => {
-        return await Planning.find();
-    },
-
+    
     /**
      * @description Get all plannings by user
      * @param {*} userId 
      * @param {*} role 
-     * @returns 
+     * TODO: Implement pagination and query filters
      */
     getPlannings: async (userId) => {
         return await Planning.find({ userId: userId });
@@ -30,7 +24,7 @@ module.exports = {
 
     /**
      * @description Get a planning by id
-     * @param {*} id 
+     * @param {*} id is the mongo_id of the planning
      */
     getPlanning: async (id) => {
         return await Planning.findById(id)
@@ -38,28 +32,28 @@ module.exports = {
 
     /**
      * @description Get a populated planning by id
-     * @param {*} id 
+     * @param {*} id is the mongo_id of the planning
      */
     getPopulatedPlanning: async (id) => {
         return await Planning.findById(id)
         .populate({
-            path: 'workouts.workout',
+            path: 'workouts.data',
             model: Workout,
-            populate: {
+/*             populate: {
                 path: 'exercises.exercise',
                 model: Exercise
-            }
+            } */
         });
     },
 
     /**
      * @description Add a workout to a planning
-     * @param {*} planningId 
-     * @param {*} workoutId 
+     * @param {*} planningId is the mongo_id of the planning
+     * @param {*} workout is a workoutReferenceSchema defined in planning.model.js
      */
-    addWorkout: async (planningId, workoutId) => {
+    addWorkout: async (planningId, workout) => {
         const planning = await Planning.findById(planningId);
-        planning.workouts.push(workoutId);
+        planning.workouts.push(workout);
         return await planning.save();
     }
 };
