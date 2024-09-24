@@ -50,9 +50,9 @@ module.exports = {
 
         // req.user = decodedToken;
         const role = req.headers['role'];
-        const userId = req.headers['userId'];
+        const userId = req.headers['userid'];
         req.user = {
-          userId: userId,
+          _id: userId,
           role: role
         };
 

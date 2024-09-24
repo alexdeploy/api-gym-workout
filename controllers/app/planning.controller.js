@@ -27,14 +27,8 @@ module.exports = {
      */
     getPlannings: async (req, res) => {
         try {
-            let user = {};
-            const userRole = req.user.role;
-            if(userRole == 'trainer') {
-                user = { trainerId: req.user.userId };
-            } else {
-                user = { traineeId: req.user.userId };
-            }
-            const plannings = await PlanningService.getPlannings(user);
+            const userId = req.user._id;
+            const plannings = await PlanningService.getPlannings(userId);
             res.status(200).json(plannings);
         } catch (error) {
             res.status(500).json({ message: error.message });
