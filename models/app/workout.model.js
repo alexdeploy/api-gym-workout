@@ -1,54 +1,61 @@
 const mongoose = require('mongoose');
 const appDB = mongoose.connection.useDb('app');
 
+const User = require('../auth/user.model');
+
+const Exercise = require('../database/exercise.model');
+
+const logSchema = new mongoose.Schema({
+  set: Number,
+  date: Date,
+  weight: Number,
+  reps: Number,
+  rir: Number,
+  time: Number,
+  rest: Number,
+});
+
 const exerciseReferenceSchema = new mongoose.Schema({
-  info: mongoose.Schema.Types.ObjectId,
-  order: Number,
+  data: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: Exercise,
+    required: true
+  },
   sets: Number,
   reps: Number,
+  rest: {
+    max: Number,
+    min: Number
+  },
   rir: {
     max: Number,
     min: Number
   },
-  restTime: {
-    max: Number,
-    min: Number
-  },
-  material: {
-    type: Array,
-    required: false
-  },
-  recommendations: String,
-  advices: String,
   notes: String,
+  logs: [logSchema],
   createdAt: { type: Date, default: Date.now }
 });
 
 // Definir el esquema del workout
 const workoutSchema = new mongoose.Schema({
-  trainerId: {
+  _id: {
     type: mongoose.Schema.Types.ObjectId,
-    // ref: 'User',
-    required: false
+    required: true,
+    auto: true
   },
-  traineeId: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
-    // ref: 'User',
-    required: false
+    ref: User,
+    required: true,
   },
-  name: { type: String, required: true },
-  description: String,
-  muscle_groups: [
-    {
-      _id: mongoose.Schema.Types.ObjectId,
-      key: String
-    }
-  ],
-  dates: [Date],
-  status: {
+  name: { 
+    type: String, 
+    required: true 
+  },
+  description: {
     type: String,
-    enum: ['pending', 'active', 'completed'],
-    default: 'pending'
+    required: false,
+    default: null
   },
   exercises: [exerciseReferenceSchema],
   createdAt: { type: Date, default: Date.now },
