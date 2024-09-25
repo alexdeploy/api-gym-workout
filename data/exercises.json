@@ -1,0 +1,144 @@
+{
+    "exercises": [
+      {
+        "_key": "incline_barbell_press",
+        "name": "Incline Barbell Press",
+        "description": "Incline press with barbell on machine.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc4338ad0220f1857f3"
+          },
+          {
+            "data": "66f2ffc6338ad0220f18585a"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "flat_dumbbell_press",
+        "name": "Flat Dumbbell Press",
+        "description": "Flat bench press using dumbbells.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc4338ad0220f1857f3"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "description": "Pulldown exercise targeting the lats using a cable machine.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc5338ad0220f1857fe"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "description": "Overhead shoulder press using dumbbells.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc6338ad0220f18585a"
+          },
+          {
+            "data": "66f2ffc6338ad0220f18582e"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "barbell_deadlift",
+        "name": "Barbell Deadlift",
+        "description": "Deadlift exercise using a barbell, targeting legs, back, and glutes.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc5338ad0220f1857fe"
+          },
+          {
+            "data": "66f2ffc6338ad0220f185868"
+          },
+          {
+            "data": "66f2ffc7338ad0220f1858a0"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "plank",
+        "name": "Plank",
+        "description": "Isometric core exercise holding a straight position for time.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc5338ad0220f185820"
+          }
+        ],
+        "materials": []
+      },
+      {
+        "_key": "squat",
+        "name": "Barbell Squat",
+        "description": "Squat exercise using a barbell, primarily targeting legs and glutes.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc6338ad0220f185868"
+          },
+          {
+            "data": "66f2ffc7338ad0220f1858a0"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "dumbbell_bicep_curl",
+        "name": "Dumbbell Bicep Curl",
+        "description": "Isolation exercise for the biceps using dumbbells.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc6338ad0220f18582e"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      }
+    ]
+  }
+  
