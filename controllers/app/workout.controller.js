@@ -86,5 +86,21 @@ module.exports = {
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
+    },
+
+    /**
+     * @description Add log to exercise
+     * @param {*} req 
+     * @param {*} res 
+     */
+    addLogToExercise: async (req, res) => {
+        try {
+            const userId = req.user._id;
+            req.body.userId = userId;
+            const workout = await workoutService.addLogToExercise(req.params.id, req.params.exerciseId, req.body);
+            res.status(200).json(workout);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
     }
 };

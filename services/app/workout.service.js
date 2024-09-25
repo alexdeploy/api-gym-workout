@@ -80,12 +80,22 @@ module.exports = {
      * @param {*} res
      */
     addExercise: async (workoutId, exercise) => {
-        try {
-            const workout = await Workout.findById(workoutId);
-            workout.exercises.push(exercise);
-            return await workout.save();
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    }
+        const workout = await Workout.findById(workoutId);
+        workout.exercises.push(exercise);
+        return await workout.save();
+    },
+
+    /**
+     * @description Add a user log to an exercise in a workout
+     * @param {*} workoutId 
+     * @param {*} exerciseId 
+     * @param {*} log 
+     * @returns 
+     */
+    addLogToExercise: async (workoutId, exerciseId, log) => {
+        const workout = await Workout.findById(workoutId);
+        const exercise = workout.exercises.id(exerciseId);
+        exercise.logs.push(log);
+        return await workout.save();
+    },
 };

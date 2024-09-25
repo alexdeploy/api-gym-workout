@@ -11,4 +11,7 @@ router.get('/:id/exercises/:exerciseId', workoutController.getWorkoutExercise);
 // Add exercise to workout
 router.post('/:id/exercises', workoutController.addExercise);
 
+// Add log to exercise
+router.post('/:id/exercises/:exerciseId/logs', workoutController.addLogToExercise);
+
 module.exports = router;

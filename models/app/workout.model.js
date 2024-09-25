@@ -6,11 +6,19 @@ const User = require('../auth/user.model');
 const Exercise = require('../database/exercise.model');
 
 const logSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: User,
+    required: true
+  },
   set: Number,
   date: Date,
   weight: Number,
   reps: Number,
-  rir: Number,
+  rir: {
+    min: Number,
+    max: Number
+  },
   time: Number,
   rest: Number,
 });
