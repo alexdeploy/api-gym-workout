@@ -37,10 +37,10 @@ module.exports = {
      */
     getUser: async (id) => {
         return await User.findById(id)
-            .populate({
+/*             .populate({
                 path: 'profiles.role',
                 model: Role,
-            });
+            }); */
     },
 
     /**
