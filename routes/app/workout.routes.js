@@ -8,4 +8,7 @@ router.get('/', workoutController.getWorkouts);
 router.get('/:id', workoutController.getWorkout);
 router.get('/:id/exercises/:exerciseId', workoutController.getWorkoutExercise);
 
+// Add exercise to workout
+router.post('/:id/exercises', workoutController.addExercise);
+
 module.exports = router;
