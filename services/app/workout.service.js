@@ -36,7 +36,7 @@ module.exports = {
             if (date) {
                 const startOfDay = moment(date).startOf('day').toISOString();
                 const endOfDay = moment(date).endOf('day').toISOString();
-                filter.dates = { $gte: startOfDay, $lte: endOfDay };
+                filter.date = { $gte: startOfDay, $lte: endOfDay };
             }
     
             // Ejecutar la consulta con el filtro, paginación y ordenamiento
@@ -98,4 +98,20 @@ module.exports = {
         exercise.logs.push(log);
         return await workout.save();
     },
+
+    /**
+     * @description Update workout status
+     * @param {*} workoutId
+     * @param {*} status
+     */
+    updateWorkoutStatus: async (workoutId, status) => {
+        const workout = await Workout.findById(workoutId);
+        if (!workout) {
+        return res.status(404).json({ error: "Workout not found or unauthorized" });
+        }
+
+        workout.status = status;
+        return await workout.save();
+        // return await Workout.findByIdAndUpdate(workoutId, { status: status }, { new: true });
+    }
 };

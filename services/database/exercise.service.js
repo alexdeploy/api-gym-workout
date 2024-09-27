@@ -25,7 +25,7 @@ module.exports = {
             const endOfDay = moment(date).endOf('day').toISOString();
             filter.dates = { $gte: startOfDay, $lte: endOfDay };
         }
-
+        
         const exercises = await Exercise.find({ name: { $regex: search, $options: 'i' } })
             .sort({ [sortBy]: sort })
             .skip((page - 1) * limit)

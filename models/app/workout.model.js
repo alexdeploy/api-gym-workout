@@ -21,6 +21,10 @@ const logSchema = new mongoose.Schema({
   },
   time: Number,
   rest: Number,
+  extra: {
+    type: Boolean,
+    default: false
+  }
 });
 
 const exerciseReferenceSchema = new mongoose.Schema({
@@ -41,7 +45,21 @@ const exerciseReferenceSchema = new mongoose.Schema({
   },
   notes: String,
   logs: [logSchema],
+  status: {
+    type: String,
+    enum: ['pending', 'completed'],
+    default: 'pending'
+  },
+  completedAt: { type: Date, default: null },
   createdAt: { type: Date, default: Date.now }
+});
+
+exerciseReferenceSchema.pre('save', function(next) {
+  if(this.logs.length == this.sets) {
+    this.status = 'completed';
+    this.completedAt = Date.now();
+  }
+  next();
 });
 
 // Definir el esquema del workout
@@ -66,6 +84,17 @@ const workoutSchema = new mongoose.Schema({
     default: null
   },
   exercises: [exerciseReferenceSchema],
+  date: {
+    type: Date,
+    required: false,
+    default: null
+  },
+  status: {
+    type: String,
+    required: false,
+    enum: ['pending', 'active', 'completed', 'cancelled', 'failed'],
+    default: 'pending'
+  },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });

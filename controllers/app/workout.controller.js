@@ -102,5 +102,27 @@ module.exports = {
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
+    },
+
+    /**
+     * @description Update workout status
+     * @param {*} req
+     * @param {*} res
+     * * Works ✓
+     */
+    updateWorkoutStatus: async (req, res) => {
+        try {
+            const { status } = req.body;
+
+            // Validar que el status es correcto
+            if (!['pending', 'active', 'completed', 'cancelled', 'failed'].includes(status)) {
+                return res.status(400).json({ error: `Invalid status [${status}]` });
+            }
+
+            const workout = await workoutService.updateWorkoutStatus(req.params.id, req.body.status);
+            res.status(200).json(workout);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
     }
 };

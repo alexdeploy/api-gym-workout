@@ -14,4 +14,7 @@ router.post('/:id/exercises', workoutController.addExercise);
 // Add log to exercise
 router.post('/:id/exercises/:exerciseId/logs', workoutController.addLogToExercise);
 
+// Update workout status
+router.patch('/:id/status', workoutController.updateWorkoutStatus);
+
 module.exports = router;

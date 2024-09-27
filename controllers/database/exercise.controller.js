@@ -33,7 +33,7 @@ module.exports = {
                 sortBy: sortBy || 'createdAt',
                 sort: sort || 'desc',
                 date: date || null,
-                search: search || { $exists: true }
+                search: search || ''
             };
 
             const exercises = await exerciseService.getExercises(query);
