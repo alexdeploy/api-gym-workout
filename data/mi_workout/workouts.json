@@ -1,0 +1,320 @@
+{
+  "workouts": [
+    {
+      "_id": "66f6e66d65dde425d56c0be7",
+      "userId": "66f1c74b40eb52f213830899",
+      "name": "PIERNAS Y ESPALDA",
+      "description": "Workout de pecho y hombro",
+      "date": null,
+      "status": "pending",
+      "exercises": [
+        {
+          "rest": {
+            "max": 120,
+            "min": 90
+          },
+          "rir": {
+            "max": 1,
+            "min": 1
+          },
+          "data": {
+            "_id": "66f6f2929367bc54d2ed5fcb",
+            "_key": "incline_dumbbell_press",
+            "name": "Incline Dumbbell Press",
+            "description": "Incline bench press performed with dumbbells, targeting the upper chest and shoulders.",
+            "image": "",
+            "muscle_groups": [
+              {
+                "data": {
+                  "_id": "66f2ffc4338ad0220f1857f3",
+                  "_key": "chest",
+                  "name": "chest",
+                  "parentId": null,
+                  "children": [],
+                  "createdAt": "2024-09-24T18:07:00.627Z",
+                  "updatedAt": "2024-09-24T18:07:00.627Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2929367bc54d2ed5fcc"
+              },
+              {
+                "data": {
+                  "_id": "66f2ffc6338ad0220f18585a",
+                  "_key": "shoulders",
+                  "name": "shoulders",
+                  "parentId": null,
+                  "children": [],
+                  "createdAt": "2024-09-24T18:07:02.686Z",
+                  "updatedAt": "2024-09-24T18:07:02.686Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2929367bc54d2ed5fcd"
+              }
+            ],
+            "materials": [
+              {
+                "data": {
+                  "_id": "66f303080b0dc04298e1c66e",
+                  "_key": "barbell",
+                  "name": "barbell",
+                  "description": null,
+                  "image": null,
+                  "createdAt": "2024-09-24T18:20:56.786Z",
+                  "updatedAt": "2024-09-24T18:20:56.787Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2929367bc54d2ed5fce"
+              }
+            ],
+            "createdAt": "2024-09-27T17:59:46.368Z",
+            "updatedAt": "2024-09-27T17:59:46.368Z",
+            "__v": 0
+          },
+          "sets": 4,
+          "reps": 8,
+          "notes": "",
+          "status": "pending",
+          "completedAt": null,
+          "_id": "66f6f45dfb9dfeef65a0895f",
+          "logs": [],
+          "createdAt": "2024-09-27T18:07:25.018Z"
+        },
+        {
+          "rest": {
+            "max": 120,
+            "min": 90
+          },
+          "rir": {
+            "max": 1,
+            "min": 1
+          },
+          "data": {
+            "_id": "66f6f29c9367bc54d2ed5fd0",
+            "_key": "flat_hammer_press",
+            "name": "Flat Hammer Press",
+            "description": "Flat bench press using a Hammer Strength machine, focusing on chest muscles.",
+            "image": "",
+            "muscle_groups": [
+              {
+                "data": {
+                  "_id": "66f2ffc4338ad0220f1857f3",
+                  "_key": "chest",
+                  "name": "chest",
+                  "parentId": null,
+                  "children": [],
+                  "createdAt": "2024-09-24T18:07:00.627Z",
+                  "updatedAt": "2024-09-24T18:07:00.627Z",
+                  "__v": 0
+                },
+                "_id": "66f6f29c9367bc54d2ed5fd1"
+              }
+            ],
+            "materials": [
+              {
+                "data": {
+                  "_id": "66f303080b0dc04298e1c66e",
+                  "_key": "barbell",
+                  "name": "barbell",
+                  "description": null,
+                  "image": null,
+                  "createdAt": "2024-09-24T18:20:56.786Z",
+                  "updatedAt": "2024-09-24T18:20:56.787Z",
+                  "__v": 0
+                },
+                "_id": "66f6f29c9367bc54d2ed5fd2"
+              }
+            ],
+            "createdAt": "2024-09-27T17:59:56.048Z",
+            "updatedAt": "2024-09-27T17:59:56.048Z",
+            "__v": 0
+          },
+          "sets": 4,
+          "reps": 10,
+          "notes": "",
+          "status": "pending",
+          "completedAt": null,
+          "_id": "66f6f462fb9dfeef65a08965",
+          "logs": [],
+          "createdAt": "2024-09-27T18:07:30.639Z"
+        },
+        {
+          "rest": {
+            "max": 120,
+            "min": 90
+          },
+          "rir": {
+            "max": 1,
+            "min": 1
+          },
+          "data": {
+            "_id": "66f6f2a59367bc54d2ed5fd4",
+            "_key": "military_dumbbell_press",
+            "name": "Military Dumbbell Press",
+            "description": "Overhead shoulder press using dumbbells, focusing on shoulder muscles.",
+            "image": "",
+            "muscle_groups": [
+              {
+                "data": {
+                  "_id": "66f2ffc6338ad0220f18585a",
+                  "_key": "shoulders",
+                  "name": "shoulders",
+                  "parentId": null,
+                  "children": [],
+                  "createdAt": "2024-09-24T18:07:02.686Z",
+                  "updatedAt": "2024-09-24T18:07:02.686Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2a59367bc54d2ed5fd5"
+              }
+            ],
+            "materials": [
+              {
+                "data": {
+                  "_id": "66f303080b0dc04298e1c66e",
+                  "_key": "barbell",
+                  "name": "barbell",
+                  "description": null,
+                  "image": null,
+                  "createdAt": "2024-09-24T18:20:56.786Z",
+                  "updatedAt": "2024-09-24T18:20:56.787Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2a59367bc54d2ed5fd6"
+              }
+            ],
+            "createdAt": "2024-09-27T18:00:05.902Z",
+            "updatedAt": "2024-09-27T18:00:05.902Z",
+            "__v": 0
+          },
+          "sets": 4,
+          "reps": 10,
+          "notes": "",
+          "status": "pending",
+          "completedAt": null,
+          "_id": "66f6f469fb9dfeef65a0896c",
+          "logs": [],
+          "createdAt": "2024-09-27T18:07:37.450Z"
+        },
+        {
+          "rest": {
+            "max": 120,
+            "min": 90
+          },
+          "rir": {
+            "max": 1,
+            "min": 1
+          },
+          "data": {
+            "_id": "66f6f2b39367bc54d2ed5fd8",
+            "_key": "lateral_dumbbell_raises",
+            "name": "Lateral Dumbbell Raises",
+            "description": "Lateral shoulder raises performed with dumbbells, targeting the side delts.",
+            "image": "",
+            "muscle_groups": [
+              {
+                "data": {
+                  "_id": "66f2ffc6338ad0220f18585a",
+                  "_key": "shoulders",
+                  "name": "shoulders",
+                  "parentId": null,
+                  "children": [],
+                  "createdAt": "2024-09-24T18:07:02.686Z",
+                  "updatedAt": "2024-09-24T18:07:02.686Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2b39367bc54d2ed5fd9"
+              }
+            ],
+            "materials": [
+              {
+                "data": {
+                  "_id": "66f303080b0dc04298e1c66e",
+                  "_key": "barbell",
+                  "name": "barbell",
+                  "description": null,
+                  "image": null,
+                  "createdAt": "2024-09-24T18:20:56.786Z",
+                  "updatedAt": "2024-09-24T18:20:56.787Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2b39367bc54d2ed5fda"
+              }
+            ],
+            "createdAt": "2024-09-27T18:00:19.558Z",
+            "updatedAt": "2024-09-27T18:00:19.558Z",
+            "__v": 0
+          },
+          "sets": 4,
+          "reps": 12,
+          "notes": "",
+          "status": "pending",
+          "completedAt": null,
+          "_id": "66f6f46efb9dfeef65a08974",
+          "logs": [],
+          "createdAt": "2024-09-27T18:07:42.881Z"
+        },
+        {
+          "rest": {
+            "max": 120,
+            "min": 90
+          },
+          "rir": {
+            "max": 1,
+            "min": 1
+          },
+          "data": {
+            "_id": "66f6f2bd9367bc54d2ed5fdc",
+            "_key": "front_barbell_raises",
+            "name": "Front Barbell Raises",
+            "description": "Front shoulder raises performed with a barbell, targeting the front delts.",
+            "image": "",
+            "muscle_groups": [
+              {
+                "data": {
+                  "_id": "66f2ffc6338ad0220f18585a",
+                  "_key": "shoulders",
+                  "name": "shoulders",
+                  "parentId": null,
+                  "children": [],
+                  "createdAt": "2024-09-24T18:07:02.686Z",
+                  "updatedAt": "2024-09-24T18:07:02.686Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2bd9367bc54d2ed5fdd"
+              }
+            ],
+            "materials": [
+              {
+                "data": {
+                  "_id": "66f303080b0dc04298e1c66e",
+                  "_key": "barbell",
+                  "name": "barbell",
+                  "description": null,
+                  "image": null,
+                  "createdAt": "2024-09-24T18:20:56.786Z",
+                  "updatedAt": "2024-09-24T18:20:56.787Z",
+                  "__v": 0
+                },
+                "_id": "66f6f2bd9367bc54d2ed5fde"
+              }
+            ],
+            "createdAt": "2024-09-27T18:00:29.103Z",
+            "updatedAt": "2024-09-27T18:00:29.103Z",
+            "__v": 0
+          },
+          "sets": 3,
+          "reps": 12,
+          "notes": "",
+          "status": "pending",
+          "completedAt": null,
+          "_id": "66f6f476fb9dfeef65a0897d",
+          "logs": [],
+          "createdAt": "2024-09-27T18:07:50.094Z"
+        }
+      ],
+      "createdAt": "2024-09-27T17:07:57.532Z",
+      "updatedAt": "2024-09-27T18:07:50.095Z",
+      "__v": 5
+    }
+  ]
+}
