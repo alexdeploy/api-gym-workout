@@ -138,6 +138,89 @@
             "data": "66f303080b0dc04298e1c66e"
           }
         ]
+      },
+      {
+        "_key": "incline_dumbbell_press",
+        "name": "Incline Dumbbell Press",
+        "description": "Incline bench press performed with dumbbells, targeting the upper chest and shoulders.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc4338ad0220f1857f3"
+          },
+          {
+            "data": "66f2ffc6338ad0220f18585a"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e" 
+          }
+        ]
+      },
+      {
+        "_key": "flat_hammer_press",
+        "name": "Flat Hammer Press",
+        "description": "Flat bench press using a Hammer Strength machine, focusing on chest muscles.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc4338ad0220f1857f3"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "military_dumbbell_press",
+        "name": "Military Dumbbell Press",
+        "description": "Overhead shoulder press using dumbbells, focusing on shoulder muscles.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc6338ad0220f18585a"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "lateral_dumbbell_raises",
+        "name": "Lateral Dumbbell Raises",
+        "description": "Lateral shoulder raises performed with dumbbells, targeting the side delts.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc6338ad0220f18585a"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
+      },
+      {
+        "_key": "front_barbell_raises",
+        "name": "Front Barbell Raises",
+        "description": "Front shoulder raises performed with a barbell, targeting the front delts.",
+        "image": "",
+        "muscle_groups": [
+          {
+            "data": "66f2ffc6338ad0220f18585a"
+          }
+        ],
+        "materials": [
+          {
+            "data": "66f303080b0dc04298e1c66e"
+          }
+        ]
       }
     ]
   }

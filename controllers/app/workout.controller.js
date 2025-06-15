@@ -9,11 +9,12 @@ module.exports = {
     createWorkout: async (req, res) => {
         try {
             const userId = req.user._id;
-
             const workout = await workoutService.createWorkout({ ...req.body, userId });
-            res.status(201).json(workout);
+
+            res.status(201).json({ _id: workout._id });
+            
         } catch (error) {
-            res.status(500).json({ message: error.message });
+            res.status(500).json({ success : false, message: error.message });
         }
     },
     /**
@@ -23,9 +24,8 @@ module.exports = {
      */
     getWorkouts: async (req, res) => {
         try {
-            const { page, limit, sortBy, sort, date, search } = req.query;
+            const { page, limit, sortBy, sort, date, search, populate } = req.query;
     
-            // El valor predeterminado de search debe ser una cadena vacía
             const query = {
                 traineeId: req.user.userId,
                 page: parseInt(page, 10) || 1,
@@ -33,12 +33,14 @@ module.exports = {
                 sortBy: sortBy || 'createdAt',
                 sort: sort || 'desc',
                 date: date || null,
-                search: search || ''  // Cambiamos $exists a una cadena vacía
+                search: search || '',
+                populate: populate || false
             };
     
             const workouts = await workoutService.getWorkouts(query);
     
             res.status(200).json(workouts);
+            
         } catch (error) {
             res.status(500).json({ message: error.message });
         }

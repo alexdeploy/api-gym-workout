@@ -22,7 +22,7 @@ module.exports = {
      */
     getWorkouts: async (query) => {
         try {
-            const { traineeId, page, limit, sortBy, sort, date, search } = query;
+            const { traineeId, page, limit, sortBy, sort, date, search, populate } = query;
     
             // Construir el filtro dinámicamente
             const filter = { traineeId: traineeId };
@@ -38,14 +38,38 @@ module.exports = {
                 const endOfDay = moment(date).endOf('day').toISOString();
                 filter.date = { $gte: startOfDay, $lte: endOfDay };
             }
+
+            if(populate) {
     
-            // Ejecutar la consulta con el filtro, paginación y ordenamiento
             const workouts = await Workout.find(filter)
                 .sort({ [sortBy]: sort })
                 .skip((page - 1) * limit)
+                .limit(limit)
+                .populate({
+                    path: 'exercises.data',
+                    model: Exercise,
+                    populate: [
+                        {
+                            path: 'materials.data',
+                            model: Material
+                        },
+                        {
+                            path: 'muscle_groups.data',
+                            model: MuscleGroup
+                        }
+                    ]
+                });
+
+                return workouts;
+            } else {
+
+                const workouts = await Workout.find(filter)
+                .sort({ [sortBy]: sort })
+                .skip((page - 1) * limit)
                 .limit(limit);
-    
-            return workouts;
+
+                return workouts;
+            }
         } catch (error) {
             throw new Error(error.message);
         }
